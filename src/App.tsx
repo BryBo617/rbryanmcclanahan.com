@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './styles/style.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+    <div className="fill-view-port is-paper">
+      <header className="header">
+        <div className="banner">
+          <div className="banner-box">
+            <div className="title">R. Bryan McClanahan</div>
+            <div className="subtitle">Software Developer, Musician, Father</div>
+            <div className="tagline">
+              I have been a software developer for over 25 years. I still enjoy
+              what I do but I need my hobbies to keep me sane. As a musician, I
+              play guitar, bass, drums, and piano. I write music and record in
+              my home studio.
+            </div>
+            <div className="sign-off">Welcome to my personal website!</div>
+          </div>
+          <img className="image" src="/images/banner.png" alt="Site Banner" />
+        </div>
+      </header>
+      <footer className="footer p-strip--highlighted">
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          &copy; 2025 R. Bryan McClanahan.
+          <br />
+          All rights reserved.
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;
