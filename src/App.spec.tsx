@@ -1,26 +1,42 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import App from './App';
 
 describe('App Component', () => {
-  it('renders the header text', () => {
+  beforeEach(() => {
     render(<App />);
-    expect(screen.getByText('Vite + React')).toBeInTheDocument();
   });
 
-  it('displays the initial count as 0', () => {
-    render(<App />);
-    expect(screen.getByText('count is 0')).toBeInTheDocument();
+  it('renders the title correctly', () => {
+    expect(screen.getByText('R. Bryan McClanahan')).toBeInTheDocument();
   });
 
-  it('increments the count when button is clicked', () => {
-    render(<App />);
-    const button = screen.getByRole('button', { name: /count is/i });
+  it('renders the subtitle correctly', () => {
+    expect(
+      screen.getByText('Software Developer, Musician, Father')
+    ).toBeInTheDocument();
+  });
 
-    fireEvent.click(button);
-    expect(screen.getByText('count is 1')).toBeInTheDocument();
+  it('renders the tagline text', () => {
+    expect(
+      screen.getByText(/I have been a software developer for over 25 years/)
+    ).toBeInTheDocument();
+  });
 
-    fireEvent.click(button);
-    expect(screen.getByText('count is 2')).toBeInTheDocument();
+  it('renders the welcome message', () => {
+    expect(
+      screen.getByText('Welcome to my personal website!')
+    ).toBeInTheDocument();
+  });
+
+  it('displays the banner image', () => {
+    const bannerImage = screen.getByAltText('Site Banner');
+    expect(bannerImage).toBeInTheDocument();
+    expect(bannerImage).toHaveAttribute('src', '/images/banner.png');
+  });
+
+  it('includes a footer with copyright information', () => {
+    expect(screen.getByText(/© 2025 R. Bryan McClanahan./)).toBeInTheDocument();
+    expect(screen.getByText(/All rights reserved./)).toBeInTheDocument();
   });
 });
