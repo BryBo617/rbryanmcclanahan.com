@@ -36,7 +36,7 @@ describe('App Component', () => {
   });
 
   it('includes a footer with copyright information', () => {
-    expect(screen.getByText(/© 2025 R. Bryan McClanahan./)).toBeInTheDocument();
+    expect(screen.getByText(/©2025 R. Bryan McClanahan./)).toBeInTheDocument();
     expect(screen.getByText(/All rights reserved./)).toBeInTheDocument();
   });
 });

@@ -42,7 +42,7 @@
 
     position: absolute;
     max-width: 600px;
-    background-color: rgba(237, 202, 185, 0.25);
+    background-color: rgba(237, 202, 185, 0.5);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
@@ -170,6 +170,40 @@
   }
 }
 
+.content {
+  max-width: 1280px;
+  margin: 30px auto;
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 0.9em;
+    padding: 0;
+    margin: -0.5em 0 0 0;
+    ;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    padding: 0;
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+  }
+
+  @media (min-width: 1025px) {
+    font-size: 18px;
+    padding: 0.5rem 1rem;
+  }
+
+  position: relative;
+}
+
 .fill-view-port {
   position: absolute;
   top: 0;
@@ -177,6 +211,7 @@
   right: 0;
   bottom: 0;
   overflow: auto;
+  padding-bottom: 60px;
 }
 
 .header {
@@ -190,10 +225,6 @@
 
   @media (min-width: 1025px) {}
 
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -216,6 +247,7 @@
   @media (max-width: 768px) {
     font-size: 12px;
     padding: 0;
+    height: 50px;
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
@@ -228,15 +260,58 @@
     padding: 0.5rem 1rem;
   }
 
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 60px;
+  box-sizing: border-box;
+
+  .copyright {
+    text-align: center;
+    margin-top: auto;
+    padding-top: 10px;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    width: auto;
+  }
+}
+
+.diploma {
+  @media (max-width: 480px) {
+    height: 400px;
+    min-height: 250px;
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {}
+
+  @media (max-width: 768px) and (orientation: landscape) {}
+
+  @media (min-width: 769px) and (max-width: 1024px) {}
+
+  @media (min-width: 1025px) {}
+
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-image: url(/images/diploma.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  .disclaimer {
+    position: absolute;
+    bottom: 0.80em;
+    right: 0.25em;
+  }
 }
