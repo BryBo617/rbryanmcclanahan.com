@@ -53,7 +53,7 @@ function App() {
           </div>
         </div>
       </section>
-      <footer className="footer p-strip--highlighted">
+      <footer className="footer">
         <div className="copyright p-text--x-small">
           &copy;{new Date().getFullYear()} R. Bryan McClanahan. All rights
           reserved.

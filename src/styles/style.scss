@@ -44,7 +44,8 @@
     max-width: 600px;
     background-color: rgba(237, 202, 185, 0.5);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: solid 1px rgba(187, 185, 168, 0.5);
+    box-shadow: 0 4px 8px rgba(187, 185, 168, 1);
     display: flex;
     flex-direction: column;
     padding: 1em;
@@ -84,6 +85,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top right;
+    border: solid 0.10em rgba(187, 185, 168, 1);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
   }
@@ -276,6 +278,7 @@
   z-index: 100;
   height: 60px;
   box-sizing: border-box;
+  background-color: rgba(187, 185, 168, 1);
 
   .copyright {
     text-align: center;
