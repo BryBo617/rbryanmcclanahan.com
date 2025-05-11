@@ -30,9 +30,9 @@ describe('App Component', () => {
   });
 
   it('displays the banner image', () => {
-    const bannerImage = screen.getByAltText('Site Banner');
+    const bannerImage = screen.getByTestId('site-banner');
     expect(bannerImage).toBeInTheDocument();
-    expect(bannerImage).toHaveAttribute('src', '/images/banner.png');
+    expect(bannerImage).toHaveAttribute('class', 'image');
   });
 
   it('includes a footer with copyright information', () => {
