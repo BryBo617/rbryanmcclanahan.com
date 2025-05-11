@@ -1,5 +1,6 @@
 @import 'vanilla-framework';
 @include vanilla;
+@include vf-p-grid-8;
 
 .banner {
   display: flex;
@@ -173,19 +174,94 @@
 }
 
 .content {
-  max-width: 1280px;
-  margin: 30px auto;
+  p {
+    @media (max-width: 480px) {
+      max-width: 100%;
+      text-align: center;
+    }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+      max-width: 100%;
+    }
+
+    @media (max-width: 768px) and (orientation: landscape) {
+      max-width: 100%;
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      max-width: 100%;
+    }
+
+    @media (min-width: 1025px) {}
+  }
+
+  .row {
+    @media (max-width: 480px) {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+      max-width: 100%;
+    }
+
+    @media (max-width: 768px) and (orientation: landscape) {
+      max-width: 100%;
+      display: flex;
+      flex-direction: row; // Keep horizontal layout in landscape
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 0 1rem;
+
+      .grid-col-8 {
+        width: 58%;
+        flex: 0 0 58%;
+      }
+
+      .grid-col-4 {
+        width: 38%;
+        flex: 0 0 38%;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      max-width: 100%;
+
+      .content-box {
+        min-width: 100%;
+      }
+    }
+
+    @media (min-width: 1025px) {}
+  }
 
   @media (max-width: 480px) {
     font-size: 14px;
     padding: 0.5rem 1rem;
+    text-align: center;
+
+    .content-box {
+      width: 100%;
+
+      h2 {
+        text-align: center;
+      }
+    }
+
+    .grid-col-8,
+    .grid-col-4 {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 
   @media (min-width: 481px) and (max-width: 768px) {
     font-size: 0.9em;
     padding: 0;
     margin: -0.5em 0 0 0;
-    ;
   }
 
   @media (max-width: 768px) {
@@ -203,7 +279,9 @@
     padding: 0.5rem 1rem;
   }
 
-  position: relative;
+  max-width: 1280px;
+  margin: 30px auto;
+  display: flex;
 }
 
 .fill-view-port {
@@ -291,27 +369,63 @@
   }
 }
 
-.diploma {
-  @media (max-width: 480px) {}
+.image-placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  @media (min-width: 481px) and (max-width: 768px) {}
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 1rem auto;
+  }
 
-  @media (max-width: 768px) and (orientation: landscape) {}
+  @media (max-width: 768px) and (orientation: landscape) {
+    width: 100%;
+    margin: 0;
+    padding-top: 1rem;
+  }
 
-  @media (min-width: 769px) and (max-width: 1024px) {}
+  .diploma {
+    @media (max-width: 480px) {
+      width: 320px;
+      height: 320px;
+    }
 
-  @media (min-width: 1025px) {}
+    @media (min-width: 481px) and (max-width: 768px) {
+      width: 320px;
+      height: 320px;
+    }
 
-  position: relative;
-  width: 400px;
-  height: 400px;
-  background-image: url(/images/diploma.png);
-  background-repeat: no-repeat;
-  background-size: contain;
+    @media (max-width: 768px) and (orientation: landscape) {
+      width: 100%;
+      height: 220px;
+      background-position: center;
 
-  .disclaimer {
-    position: absolute;
-    bottom: -0.5em;
-    right: 0.5em;
+      .disclaimer {
+        position: absolute;
+        bottom: -1.1em !important;
+        right: 1.5em !important;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      background-position: center;
+    }
+
+    @media (min-width: 1025px) {}
+
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-image: url(/images/diploma.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    .disclaimer {
+      position: absolute;
+      bottom: -0.5em;
+      right: 0.5em;
+    }
   }
 }

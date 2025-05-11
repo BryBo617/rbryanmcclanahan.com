@@ -21,9 +21,9 @@ function App() {
           <div className="image" data-testid="site-banner" />
         </div>
       </header>
-      <section className="content p-strip">
+      <section className="content p-strip grid">
         <div className="row">
-          <div className="col-8 content-box">
+          <div className="grid-col-8 content-box">
             <h2 className="p-heading--2">In a nutshell?</h2>
             <p>
               I'm a seasoned software engineer based in Overland Park, Kansas.
@@ -42,12 +42,11 @@ function App() {
               that work, scale, and make users’ lives easier.
             </p>
           </div>
-          <div className="col-4">
+          <div className="grid-col-4">
             <div className="image-placeholder is-bordered">
-              <div className="diploma" data-testid="diploma">
-                <div className="disclaimer p-text--x-small">
-                  Not actual diploma.
-                </div>
+              <div className="diploma" data-testid="diploma" />
+              <div className="disclaimer p-text--x-small">
+                Not actual diploma.
               </div>
             </div>
           </div>
