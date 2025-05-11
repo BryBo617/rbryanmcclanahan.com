@@ -292,10 +292,7 @@
 }
 
 .diploma {
-  @media (max-width: 480px) {
-    height: 400px;
-    min-height: 250px;
-  }
+  @media (max-width: 480px) {}
 
   @media (min-width: 481px) and (max-width: 768px) {}
 
@@ -306,7 +303,7 @@
   @media (min-width: 1025px) {}
 
   position: relative;
-  width: 100%;
+  width: 400px;
   height: 400px;
   background-image: url(/images/diploma.png);
   background-repeat: no-repeat;
@@ -314,7 +311,7 @@
 
   .disclaimer {
     position: absolute;
-    bottom: 0.80em;
-    right: 0.25em;
+    bottom: -0.5em;
+    right: 0.5em;
   }
 }
