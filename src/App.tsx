@@ -11,7 +11,7 @@ function App() {
               Software Developer, Musician, Father
             </h4>
             <div className="tagline">
-              I have been a software developer for over 25 years. I still enjoy
+              I have been developing software for over 25 years. I still enjoy
               what I do but I need my hobbies to keep me sane. As a musician, I
               play guitar, bass, drums, and piano. I write music and record in
               my home studio.
@@ -28,7 +28,7 @@ function App() {
             <p>
               I'm a seasoned software engineer based in Overland Park, Kansas.
               I’ve been building software professionally since 2000, shortly
-              after graduating from Columbia College Chicago. Over the years,
+              after graduating from Columbia College of Chicago. Over the years,
               I’ve worked across a wide range of projects—from lean web apps to
               full-scale software systems—always focused on delivering clean,
               effective solutions that solve real problems. I’m currently a
