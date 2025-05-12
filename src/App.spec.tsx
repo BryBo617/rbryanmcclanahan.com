@@ -19,7 +19,7 @@ describe('App Component', () => {
 
   it('renders the tagline text', () => {
     expect(
-      screen.getByText(/I have been a software developer for over 25 years/)
+      screen.getByText(/I have been developing software for over 25 years./)
     ).toBeInTheDocument();
   });
 
