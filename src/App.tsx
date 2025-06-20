@@ -28,18 +28,22 @@ function App() {
             <p>
               I'm a seasoned software engineer based in Overland Park, Kansas.
               I’ve been building software professionally since 2000, shortly
-              after graduating from Columbia College of Chicago. Over the years,
+              after graduating from Columbia College in Chicago. Over the years,
               I’ve worked across a wide range of projects—from lean web apps to
-              full-scale software systems—always focused on delivering clean,
-              effective solutions that solve real problems. I’m currently a
-              Software Engineer at Builder Designs, where I help craft custom
-              websites and develop brand-new tech to support our builder
-              partners. Whether it’s boosting brand awareness, increasing lead
-              conversion, or streamlining backend processes, I thrive on
-              building tools that move the needle. After more than two decades
-              in the industry, I've developed in many different technologies,
-              but what has stayed the course is my passion for creating things
-              that work, scale, and make users’ lives easier.
+              full-scale software systems. Always focused on delivering clean,
+              effective solutions that solve real problems. <br />
+              Most recently, I was a Senior Software Engineer at Builder
+              Designs, where I performed product support and developed new
+              technology to support our home builder partners. Whether it was
+              boosting brand awareness, increasing lead conversion, or
+              streamlining backend processes, I thrived on crafting tools that
+              moved the needle. <br />
+              Now, I'm exploring new opportunities and looking for my next role
+              as a Senior Software Engineer or Manager of Engineering. After
+              more than two decades in the industry, I’ve worked with a wide
+              variety of technologies—but what’s stayed constant is my passion
+              for creating things that work, scale, and genuinely improve users’
+              lives.
             </p>
           </div>
           <div className="grid-col-4">
